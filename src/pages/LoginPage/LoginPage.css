@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,900');
+
+:root {
+    --blue: #1e90ff;
+}
+
+.loginBody {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: url('../../assets/images/loginblob.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-position: right; */
+    height: 100vh;
+}
+
+.loginNote{
+    margin-top: 40px;
+    display: block;
+    font-size: 1.2rem;
+    font-family:'poppins'
+}
+
+/* Main box */
+
+.Main_login {
+    border-radius: 10px;
+    width: 60%;
+    height: 80%;
+    background: #fff;
+    z-index: 10;
+}
+
+.Main_login nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    height: 12%;
+    /* border: 2px solid red; */
+}
+
+.Main_login nav .logo {
+    /* border: 2px solid green; */
+    display: block;
+    width: 50%;
+}
+
+.Main_login nav .logo img {
+    width: 45px;
+    margin-left: 35px;
+    object-fit: contain;
+}
+
+.Main_login nav .nav-links {
+    /* border: 2px solid rgb(0, 255, 255); */
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.Main_login nav .nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid rebeccapurple; */
+    text-align: right;
+    width: 100%;
+}
+
+.Main_login nav .nav-links ul li {
+    list-style: none;
+    /* border: 2px solid blue; */
+    display: block;
+    margin-right: 20px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(81, 81, 81);
+    font-family: 'Poppins', serif;
+    font-size: 1.5rem;
+}
+
+.nav-links ul li a:hover {
+    color: var(--blue);
+}
+
+.Main_login .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* border: 2px solid red; */
+    height: 88%;
+}
+
+.Main_login .main-container .img-container {
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main_login .main-container .img-container img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.Main_login .main-container .form-container {
+    width: 50%;
+    text-align: center;
+}
+
+.Main_login .main-container .form-container h1 {
+    font-size: 2.6rem;
+    font-family: 'Poppins', serif;
+    color: rgb(81, 81, 81);
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* border: 2px solid red; */
+}
+
+.Main_login .main-container .form-container form {
+    /* border: 2px solid blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Main_login .main-container .form-container form .input-container {
+    position: relative;
+    margin: 15px 0px;
+    width: 70%;
+}
+
+.Main_login .main-container .form-container form i {
+    font-size: 1.5rem;
+    color: rgb(81, 81, 81);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.Main_login .main-container .form-container form input:not([type='checkbox']) {
+    display: block;
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(81, 81, 81, 0.737);
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+.Main_login .main-container .form-container form .rf-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 10px 0px 25px 0px;
+}
+
+.Main_login .main-container .form-container form .remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+}
+
+.Main_login .main-container .form-container form input[type='checkbox'] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.Main_login
+    .main-container
+    .form-container
+    form
+    input[type='checkbox']
+    + label {
+    display: inline-block;
+    font-size: 1.3rem;
+    font-family: 'Poppins', serif;
+    color: rgb(81, 81, 81);
+}
+
+.Main_login .main-container .form-container form .forgot {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+}
+.Main_login .main-container .form-container form .forgot a {
+    text-decoration: none;
+    color: rgb(0, 45, 109);
+    font-family: 'Poppins', serif;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.Main_login .main-container .form-container form .forgot a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.Main_login .main-container .form-container button {
+    display: block;
+    width: fit-content;
+    padding: 10px 10% 10px 10%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: rgb(0, 145, 0);
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.Main_login .main-container .form-container button:hover {
+    background: rgb(0, 111, 0);
+}
+
+@media (max-width: 1080px) {
+    .Main_login .main-container .form-container form .input-container {
+        width: 90%;
+    }
+    .Main_login .main-container .form-container form .rf-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 910px) {
+    .Main_login .main-container {
+        flex-direction: column;
+    }
+    .Main_login .main-container .img-container {
+        height: 138px;
+    }
+    .Main_login .main-container .form-container h1 {
+        font-size: 2rem;
+    }
+    .Main_login .main-container .form-container {
+        width: 90%;
+    }
+}
+@media (max-width: 630px) {
+    .Main_login {
+        width: 95%;
+    }
+}

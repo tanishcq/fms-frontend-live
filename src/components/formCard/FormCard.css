@@ -1,0 +1,52 @@
+.reportTable {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.data,
+.head {
+    border: 2px solid;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.deleteBtn {
+    color: rgb(255, 77, 77);
+    margin: 0.5rem;
+}
+
+.deleteBtn:hover {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+.deleting {
+    animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+

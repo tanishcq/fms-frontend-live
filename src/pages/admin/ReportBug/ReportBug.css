@@ -1,0 +1,111 @@
+/* main */
+.ReportBugMain {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.5s;
+    font-size: 1.5rem;
+}
+
+.ReportBugMain.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.reportABugContainer {
+    display: flex;
+    min-height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+}
+
+.reportABugContainer .box {
+    width: 55%;
+    border-color: white;
+    background: #fff;
+    padding: 15px 0;
+    border-radius: 13px;
+    margin: 0px 0px;
+    box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 50%);
+}
+
+.reportABugContainer .title {
+    margin-top: 20px;
+    color: #2f2d3b;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.reportABugContainer #yourEmail {
+    padding: 15px;
+    height: 35px;
+    width: 100%;
+}
+
+.reportABugContainer .inputLabel {
+    font-size: 1.6rem;
+    color: rgba(85, 85, 85, 0.91);
+    margin-bottom: 6px;
+    margin-top: 24px;
+}
+
+.reportABugContainer .emails,
+.reportABugContainer .feedback {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.reportABugContainer textarea {
+    resize: none;
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+
+.reportABugContainer input {
+    height: 40px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    border: solid 1px #ccc;
+    padding: 0 11px;
+    cursor: not-allowed;
+}
+
+.reportABugContainer .buttonSubmit {
+    margin-top: 20px;
+}
+
+.reportABugContainer .submitBtn {
+    width: 110px;
+    height: 40px;
+    margin: 15px auto 5px auto;
+    display: block;
+    color: #fff;
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+    .ReportBugMain {
+        width: 100%;
+        left: 0;
+    }
+    .ReportBugMain.active {
+        left: 300px;
+    }
+    .reportABugContainer .box {
+        width: 90%;
+    }
+    .reportABugContainer .emails,
+    .reportABugContainer .feedback {
+        width: 90%;
+    }
+}

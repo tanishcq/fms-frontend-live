@@ -1,0 +1,341 @@
+/* main */
+.AnalyticsMain {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.5s;
+    font-size: 1.5rem;
+}
+
+.AnalyticsMain.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+/*  */
+.AnalyticsFormContainer {
+    margin: 0px 20px 0 20px;
+    padding: 20px;
+}
+.tab {
+    border-collapse: collapse;
+    box-shadow: 0 7px 25px rgb(0 0 0 / 8%);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 5px;
+}
+.tab thead {
+    box-shadow: 0 7px 25px rgb(0 0 0 / 8%);
+}
+.tab th {
+    padding: 2rem 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.tab td {
+    padding: 1rem 2rem;
+    color: rgb(54, 54, 54);
+}
+
+.statusOfBug {
+    text-align: left;
+}
+/* .tab .status {
+    border-radius: 0.2rem;
+    background-color: rgb(228, 228, 228);
+    padding: 0.2rem 1rem;
+    text-align: center;
+  }
+  .tab .status-wont-fix {
+    background-color: #fff0c2;
+    color: #a68b00;
+  }
+  .tab .status-resolved {
+    background-color: #c8e6c9;
+    color: #388e3c;
+  }
+  .tab .status-open {
+    background-color: #ffcdd2;
+    color: #c62828;
+  }
+  .tab .status-other {
+    background-color: #9de0ff;
+    color: #28a6c6;
+  } */
+.tab tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.tab-email {
+    word-wrap: break-word;
+}
+.tab .reportBtn {
+    border: none;
+    color: rgb(0, 111, 0, 0.907);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 145, 0, 0.907);
+}
+
+.tab .reportBtn:hover {
+    background-color: rgba(0, 145, 0, 0.907);
+    color: rgb(255, 255, 255);
+}
+
+.shareFormBtn {
+    border: none;
+    color: #032830c0;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #032830c0;
+}
+
+.tab .shareFormBtn:hover {
+    background-color: #032830c0;
+    color: rgb(255, 255, 255);
+}
+
+.tab .editBtn {
+    background-color: rgba(255, 255, 255, 0.907);
+    border: none;
+    color: #032830c0;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #032830c0;
+    background-color: rgb(255, 255, 255);
+}
+
+.tab .editBtn:hover {
+    background-color: #032830c0;
+    color: #ffffff;
+}
+
+@media (max-width: 1171px) {
+    .AnalyticsFormContainer {
+        margin: 0%;
+    }
+    .tab .tabthead {
+        display: none;
+    }
+    .tab,
+    .tab .tabtbody,
+    .tab .tabtr,
+    .tab .tabtd {
+        display: block;
+        width: 100%;
+    }
+    .tab .tabtr {
+        margin-bottom: 15px;
+    }
+    .tab .tabtbody .tabtr .tabtd {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .tab .tabtd:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0%;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+/*  */
+.__details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+
+.__details .Totalforms {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.__cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.__cardHeader h2 {
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.__btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+
+.__details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.__details table thead td {
+    font-weight: 600;
+}
+
+.__details .Totalforms table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.__details .Totalforms table tr:last-child {
+    border-bottom: none;
+}
+
+.__details .Totalforms table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.__details .Totalforms table tr td {
+    padding: 10px;
+}
+
+.__details .Totalforms table tr td:last-child {
+    text-align: end;
+}
+
+.__details .Totalforms table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.__details .Totalforms table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.responses {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* side panel */
+
+.panel{
+    background-color: #ffffff;
+}
+
+.sliding-panel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .sliding-panel-container.active {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.196);
+    will-change: transform;
+  }
+  
+  .sliding-panel-container.active.click-through {
+    pointer-events: none;
+    background-color: transparent;
+  }
+  
+  .sliding-panel-container.click-through > div {
+    pointer-events: none;
+  }
+  
+  .panel-content {
+    height: 100%;
+    width: 100%;
+    pointer-events: all;
+    position: relative;
+  }
+  
+  .panel-container-right-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .panel-container-right-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+  }
+  .panel-container-right-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .panel-container-right-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease-in-out;
+  }
+
+/* media queries */
+@media (max-width: 991px) {
+    .AnalyticsMain {
+        width: 100%;
+        left: 0;
+    }
+    .AnalyticsMain.active {
+        left: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .__details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .Totalforms {
+        overflow-x: auto;
+    }
+    .status.responses {
+        white-space: nowrap;
+    }
+}
+

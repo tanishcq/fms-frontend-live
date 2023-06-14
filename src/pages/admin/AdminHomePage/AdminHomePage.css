@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --black1: #222;
+    --black2: #999;
+}
+
+.adminContainer {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.adminContainer * {
+    font-size: 1.5rem;
+}
+
+.__container {
+    position: relative;
+}
+
+/* main */
+.__main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background-color: var(--white);
+    transition: 0.5s;
+}
+
+.__main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.__cardBox {
+    position: relative;
+    width: 80%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.__cardBox .__card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.__cardBox .__card .__numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.__cardBox .__card .__cardName {
+    color: var(--black2);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.__cardBox .__card .__iconBx {
+    font-size: 3.5em;
+    color: var(--black2);
+}
+
+.__cardBox .__card .__iconBx i {
+    font-size: 3.5rem;
+}
+
+/* .__cardBox .__card:hover {
+    background: var(--blue);
+} */
+
+/* .__cardBox .__card:hover .__numbers,
+.__cardBox .__card:hover .__iconBx,
+.__cardBox .__card:hover .__cardName {
+    color: var(--white);
+} */
+
+.hero__section {
+    display: flex;
+}
+
+/* charts */
+.graphBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.graphBox .__box {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+
+/* media queries */
+@media (max-width: 991px) {
+    .graphBox {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .__main {
+        width: 100%;
+        left: 0;
+    }
+    .__main.active {
+        left: 300px;
+    }
+    .__cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .hero__section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .__cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .__cardHeader h2 {
+        font-size: 20px;
+    }
+}

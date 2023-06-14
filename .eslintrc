@@ -1,0 +1,60 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true, 
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react", "prettier"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "moduleDirectory": ["node_modules", "src/"]
+            }
+        }
+    },
+    "rules": {
+        // "prettier/prettier": "warn",
+        "prettier/prettier": [
+            "warn",
+            {
+                "endOfLine": "auto"
+            }
+          ],
+        "arrow-body-style": "off",
+        "no-console": "off",
+        "import/extensions": "off",
+        "import/named": "off",
+        "prefer-arrow-callback": "off",
+        "react/jsx-filename-extension": "off",
+        "import/no-unresolved": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "react/no-array-index-key": "off",
+        "import/prefer-default-export": "off",
+        "react/react-in-jsx-scope": "off",
+        "no-plusplus": "off",
+        "react/function-component-definition": "off",
+        "no-unused-vars": "warn",
+        "jsx-a11y/label-has-associated-control": 0,
+        "jsx-a11y/anchor-is-valid": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "react/jsx-no-constructed-context-values": 0
+    }
+
+}
