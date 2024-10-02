@@ -1,2 +1,2 @@
 export const restUrl =
-    'https://naughty-mite-dirndl.cyclic.app/';
+    'https://fms-backend-2vj6.onrender.com';
