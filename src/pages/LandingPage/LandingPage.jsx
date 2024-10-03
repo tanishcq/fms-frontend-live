@@ -74,6 +74,7 @@ const LandingPage = () => {
                     </a>
 
                     <div className="landingNavbar-wrapper">
+                        {/* eslint-disable-next-line */}
                         <button
                             type="submit"
                             className="landingNavbar-menu-btn homepageBtn"

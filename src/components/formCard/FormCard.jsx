@@ -235,6 +235,7 @@ function FormCard({
                     >
                         Edit Form
                     </button>
+                    {/* eslint-disable-next-line */}
                     <button
                         type="button"
                         className="deleteBtn"
